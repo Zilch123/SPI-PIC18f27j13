@@ -50,11 +50,11 @@ while(1)
 {
 if (data==0x01)     
 {
-RB7=1;       //if received data = 0x01, turn on LED
+RB0=1;       //if received data = 0x01, turn on LED
 }
 else if (data==0x02)
 {
-RB7=0;  //if received data = 0x02, turn off LED
+RB0=0;  //if received data = 0x02, turn off LED
 }
 }
 return;
