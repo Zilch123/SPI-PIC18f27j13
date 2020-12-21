@@ -1,3 +1,10 @@
+
+/*
+ * File:   newmain1.c
+ * Author: timoth dev
+ *
+ * Created on 21 December, 2020, 6:51 PM
+ */
 #include <xc.h>
 
 char data;
