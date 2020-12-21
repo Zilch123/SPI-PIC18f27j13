@@ -1,3 +1,9 @@
+/*
+ * File:   newmain1.c
+ * Author: timoth Dev 
+ *
+ * Created on 21 December, 2020, 6:51 PM
+ */
 #include <xc.h>
 //#include "newxc8_header.h"  // generated configuration bits header file
 void delay(unsigned int nMilliseconds)
