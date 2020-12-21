@@ -1,5 +1,4 @@
 #include <xc.h>
-//#include "newxc8_header.h"
 
 char data;
 void __interrupt() ISR(void)
