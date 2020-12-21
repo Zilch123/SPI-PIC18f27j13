@@ -41,12 +41,10 @@ SPI_init();
 TRISB=0x00;
 while(1)
 { 
-//if(RB0) 
 delay(1000);
-SPI_write(0x01);    // if switch pressed, send 0x01
-//else 
+SPI_write(0x01);    
 delay(1000);
-SPI_write(0x02);    // if switch is pressed pressed, send 0x02
+SPI_write(0x02);    
 }
 
 return;
