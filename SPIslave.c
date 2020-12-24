@@ -60,6 +60,7 @@ while (nCycles--);
 
 void __interrupt() ISR(void)
 {
+//RB7=1;
 if(SSP1IF)  // check if interrupt occurs due to SPI module
 {
     
@@ -72,7 +73,7 @@ if(SSP1IF)  // check if interrupt occurs due to SPI module
 
 void SPI_init()
 {
-
+RB7=0;
 // Set Spi Mode To Slave + SS Enabled 
 SSPCON1bits.SSPM0 = 0;
 SSPCON1bits.SSPM1 = 0;
@@ -106,12 +107,15 @@ TRISB = 0x00;
 
 while(1)
 {
-    if (data==0x01)     
+//    data = SSPBUF;
+//    if(SSPSTATbits.BF) // check if buffer is full 
+//        RB7=1;
+    if (data==0x07)     
     {
         RB7=1;
         RB0=1;       //if received data = 0x01, turn on LED
     }
-    else if (data==0x02)
+    else if (data==0x08)
     {
         RB7=0;
         RB0=0;  //if received data = 0x02, turn off LED
